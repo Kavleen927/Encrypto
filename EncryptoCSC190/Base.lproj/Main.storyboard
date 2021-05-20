@@ -1,0 +1,863 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="INm-WG-r5a">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="G52-a7-XFN">
+            <objects>
+                <viewController id="JOu-WF-eoG" customClass="ViewController" customModule="Encrypto" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EyN-oH-jr1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Encrypto!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FvR-mG-36E">
+                                <rect key="frame" x="20" y="88" width="374" height="84.5"/>
+                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q5C-WB-03h">
+                                <rect key="frame" x="20" y="180" width="374" height="163.5"/>
+                                <string key="text">Encrypto is an informational app designed to educate the user on various types of encryption methods from beginner to intermediate levels. Encryption helps protect sensitive data as well as enhance the security of communication. </string>
+                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It's very easy! To start, click on the encryption type below to learn more:" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s58-qT-h34">
+                                <rect key="frame" x="20" y="351" width="374" height="61.5"/>
+                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Alv-fK-MIy">
+                                <rect key="frame" x="20" y="467" width="117" height="40"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="25"/>
+                                <state key="normal" title="ENCRYPT">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" systemColor="linkColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="dVP-oi-nzc" kind="show" id="XXi-5z-6gg"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dO-nb-Cm3">
+                                <rect key="frame" x="20" y="801" width="374" height="61"/>
+                                <string key="text">"If you reveal your secrets to the wind, you should not blame the wind for revealing them to the trees."                                                   -Unknown</string>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfX-ww-JS8">
+                                <rect key="frame" x="278" y="467" width="116" height="40"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="25"/>
+                                <state key="normal" title="DECRYPT">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="B63-SZ-1ga" kind="show" id="glt-8H-O2G"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fhO-L8-SI6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Alv-fK-MIy" firstAttribute="leading" secondItem="fhO-L8-SI6" secondAttribute="leading" constant="20" id="ALX-KG-bIj"/>
+                            <constraint firstItem="fhO-L8-SI6" firstAttribute="bottom" secondItem="2dO-nb-Cm3" secondAttribute="bottom" id="EPd-3d-S8n"/>
+                            <constraint firstItem="Alv-fK-MIy" firstAttribute="top" secondItem="s58-qT-h34" secondAttribute="bottom" constant="54.5" id="FU0-zo-azY"/>
+                            <constraint firstItem="fhO-L8-SI6" firstAttribute="trailing" secondItem="Q5C-WB-03h" secondAttribute="trailing" constant="20" id="RSx-Ky-tdu"/>
+                            <constraint firstItem="fhO-L8-SI6" firstAttribute="trailing" secondItem="2dO-nb-Cm3" secondAttribute="trailing" constant="20" id="TDT-mU-cOS"/>
+                            <constraint firstItem="zfX-ww-JS8" firstAttribute="top" secondItem="s58-qT-h34" secondAttribute="bottom" constant="54.5" id="Xj4-Y0-oLt"/>
+                            <constraint firstItem="s58-qT-h34" firstAttribute="top" secondItem="Q5C-WB-03h" secondAttribute="bottom" constant="7.5" id="csj-7A-xDc"/>
+                            <constraint firstItem="fhO-L8-SI6" firstAttribute="trailing" secondItem="FvR-mG-36E" secondAttribute="trailing" constant="20" id="fsB-jy-t5R"/>
+                            <constraint firstItem="2dO-nb-Cm3" firstAttribute="leading" secondItem="fhO-L8-SI6" secondAttribute="leading" constant="20" id="hV0-KV-ySo"/>
+                            <constraint firstItem="fhO-L8-SI6" firstAttribute="trailing" secondItem="s58-qT-h34" secondAttribute="trailing" constant="20" id="hzs-D9-mQ0"/>
+                            <constraint firstItem="Q5C-WB-03h" firstAttribute="leading" secondItem="fhO-L8-SI6" secondAttribute="leading" constant="20" id="qV6-P1-TLO"/>
+                            <constraint firstItem="s58-qT-h34" firstAttribute="leading" secondItem="fhO-L8-SI6" secondAttribute="leading" constant="20" id="sp7-X2-8Nh"/>
+                            <constraint firstItem="fhO-L8-SI6" firstAttribute="trailing" secondItem="zfX-ww-JS8" secondAttribute="trailing" constant="20" id="vLz-RM-Yym"/>
+                            <constraint firstItem="Q5C-WB-03h" firstAttribute="top" secondItem="FvR-mG-36E" secondAttribute="bottom" constant="7.5" id="yOJ-sE-4Pp"/>
+                            <constraint firstItem="FvR-mG-36E" firstAttribute="top" secondItem="fhO-L8-SI6" secondAttribute="top" id="zqL-Xf-UXJ"/>
+                            <constraint firstItem="FvR-mG-36E" firstAttribute="leading" secondItem="fhO-L8-SI6" secondAttribute="leading" constant="20" id="zzt-37-1W9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Mnu-ar-epf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e48-RO-Qj2" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1198.5507246376812" y="91.741071428571431"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="pcG-hs-8vS">
+            <objects>
+                <viewController id="dVP-oi-nzc" customClass="ViewController" customModule="Encrypto" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bTo-CA-Tk5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hfm-kq-tRH">
+                                <rect key="frame" x="20" y="88" width="374" height="40"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="25"/>
+                                <state key="normal" title="ENCRYPTION METHODS">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" systemColor="linkColor"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SYMMETRIC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gez-pW-zoR">
+                                <rect key="frame" x="20" y="376" width="374" height="22.5"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ASYMMETRIC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ER3-p1-5Yo">
+                                <rect key="frame" x="20" y="609" width="374" height="22.5"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Os-GQ-PAb">
+                                <rect key="frame" x="20" y="136" width="374" height="204"/>
+                                <string key="text">There are two types of encryption methods: Symmetric and Asymmetric. Symmetric is encrypting a plaintext with one key available to both sender and receiver. Asymmetric involves two keys specific to the parties involved: Public key and Private key. Choose an encryption method you would like to encrypt your plaintext.</string>
+                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V24-Qy-Hb9">
+                                <rect key="frame" x="20" y="433" width="374" height="31"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
+                                <state key="normal" title="Caesar Cipher">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Vax-vo-cq0" kind="show" id="7uG-k4-GeQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQk-rb-HDc">
+                                <rect key="frame" x="20" y="660" width="374" height="31"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
+                                <state key="normal" title="RSA">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="RSj-FR-jic" kind="show" id="gAN-Om-zpe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xNV-2h-vND"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ER3-p1-5Yo" firstAttribute="leading" secondItem="xNV-2h-vND" secondAttribute="leading" constant="20" id="73n-iO-BXA"/>
+                            <constraint firstItem="gQk-rb-HDc" firstAttribute="leading" secondItem="xNV-2h-vND" secondAttribute="leading" constant="20" id="Aac-cv-bVl"/>
+                            <constraint firstItem="xNV-2h-vND" firstAttribute="trailing" secondItem="V24-Qy-Hb9" secondAttribute="trailing" constant="20" id="GCb-05-gNQ"/>
+                            <constraint firstItem="gQk-rb-HDc" firstAttribute="top" secondItem="ER3-p1-5Yo" secondAttribute="bottom" constant="28.5" id="IW8-3c-5hJ"/>
+                            <constraint firstItem="xNV-2h-vND" firstAttribute="trailing" secondItem="gQk-rb-HDc" secondAttribute="trailing" constant="20" id="KLw-A7-bdU"/>
+                            <constraint firstItem="ER3-p1-5Yo" firstAttribute="top" secondItem="V24-Qy-Hb9" secondAttribute="bottom" constant="145" id="Kef-ZK-7a5"/>
+                            <constraint firstItem="xNV-2h-vND" firstAttribute="trailing" secondItem="Gez-pW-zoR" secondAttribute="trailing" constant="20" id="N4w-QW-qln"/>
+                            <constraint firstItem="8Os-GQ-PAb" firstAttribute="top" secondItem="Hfm-kq-tRH" secondAttribute="bottom" constant="8" symbolic="YES" id="NyV-ik-Zt9"/>
+                            <constraint firstItem="xNV-2h-vND" firstAttribute="trailing" secondItem="8Os-GQ-PAb" secondAttribute="trailing" constant="20" id="UrG-OY-BIe"/>
+                            <constraint firstItem="Gez-pW-zoR" firstAttribute="leading" secondItem="xNV-2h-vND" secondAttribute="leading" constant="20" id="aDe-Rc-g4d"/>
+                            <constraint firstItem="xNV-2h-vND" firstAttribute="trailing" secondItem="Hfm-kq-tRH" secondAttribute="trailing" constant="20" id="aE0-Cm-MXR"/>
+                            <constraint firstItem="V24-Qy-Hb9" firstAttribute="top" secondItem="Gez-pW-zoR" secondAttribute="bottom" constant="34.5" id="b4P-ve-wlr"/>
+                            <constraint firstItem="8Os-GQ-PAb" firstAttribute="leading" secondItem="xNV-2h-vND" secondAttribute="leading" constant="20" id="fKu-IS-bgB"/>
+                            <constraint firstItem="Hfm-kq-tRH" firstAttribute="leading" secondItem="xNV-2h-vND" secondAttribute="leading" constant="20" id="fxr-NR-Tmh"/>
+                            <constraint firstItem="xNV-2h-vND" firstAttribute="trailing" secondItem="ER3-p1-5Yo" secondAttribute="trailing" constant="20" id="hiB-dL-i07"/>
+                            <constraint firstItem="Hfm-kq-tRH" firstAttribute="top" secondItem="xNV-2h-vND" secondAttribute="top" id="lzH-dC-qEm"/>
+                            <constraint firstItem="Gez-pW-zoR" firstAttribute="top" secondItem="8Os-GQ-PAb" secondAttribute="bottom" constant="36" id="saH-Od-aId"/>
+                            <constraint firstItem="V24-Qy-Hb9" firstAttribute="leading" secondItem="xNV-2h-vND" secondAttribute="leading" constant="20" id="sad-lN-K8q"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="EG6-NE-0tk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jp4-W7-IEB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1853.6231884057972" y="91.741071428571431"/>
+        </scene>
+        <!--View Controller2-->
+        <scene sceneID="UNb-iY-iWy">
+            <objects>
+                <viewController id="Vax-vo-cq0" customClass="ViewController2" customModule="Encrypto" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hSI-2Z-VgG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Caesar Cipher!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vj8-KA-P10">
+                                <rect key="frame" x="20" y="88" width="374" height="85"/>
+                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qyc-3r-UUi">
+                                <rect key="frame" x="20" y="181" width="374" height="204"/>
+                                <string key="text">Caesar Cipher is an encryption technique named after Julius Caesar. It is a very simple and widely popular shift cipher. Each letter in the plaintext you will provide will be replaced by letter that is N spaces ahead. An example is the Caesar Cipher of 2 which will replace A with C, B with D, and so on. Key can be negative.</string>
+                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CipherTextLBL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Shp-hv-rC7">
+                                <rect key="frame" x="20" y="603" width="374" height="19"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XEm-oB-27C">
+                                <rect key="frame" x="175" y="510" width="65" height="31"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
+                                <state key="normal" title="Encrypt!"/>
+                                <connections>
+                                    <action selector="ENCRYPTbtn:" destination="Vax-vo-cq0" eventType="touchUpInside" id="9HU-OT-J0o"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your PlainText" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DSV-a2-CJf">
+                                <rect key="frame" x="20" y="393" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the Key (N)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yUu-qn-d18">
+                                <rect key="frame" x="20" y="458" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ciphertext :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fMj-Oz-GDo">
+                                <rect key="frame" x="20" y="576" width="374" height="19"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2lg-Xa-cMD">
+                                <rect key="frame" x="160" y="682" width="98" height="31"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
+                                <state key="normal" title="Copy Cipher"/>
+                                <connections>
+                                    <action selector="CopyText:" destination="Vax-vo-cq0" eventType="touchUpInside" id="nFm-u3-uHQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fQR-B6-eYV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yUu-qn-d18" firstAttribute="top" secondItem="DSV-a2-CJf" secondAttribute="bottom" constant="31" id="6lK-S6-yqn"/>
+                            <constraint firstItem="Qyc-3r-UUi" firstAttribute="leading" secondItem="fQR-B6-eYV" secondAttribute="leading" constant="20" id="8dV-J3-u5J"/>
+                            <constraint firstItem="fQR-B6-eYV" firstAttribute="trailing" secondItem="Qyc-3r-UUi" secondAttribute="trailing" constant="20" id="AhL-UT-GKf"/>
+                            <constraint firstItem="fMj-Oz-GDo" firstAttribute="top" secondItem="XEm-oB-27C" secondAttribute="bottom" constant="35" id="CvG-AS-RGc"/>
+                            <constraint firstItem="yUu-qn-d18" firstAttribute="leading" secondItem="fQR-B6-eYV" secondAttribute="leading" constant="20" id="Grg-yd-iv7"/>
+                            <constraint firstItem="DSV-a2-CJf" firstAttribute="leading" secondItem="fQR-B6-eYV" secondAttribute="leading" constant="20" id="KJJ-53-gp0"/>
+                            <constraint firstItem="fQR-B6-eYV" firstAttribute="trailing" secondItem="Shp-hv-rC7" secondAttribute="trailing" constant="20" id="Mpx-UW-Z3l"/>
+                            <constraint firstItem="fQR-B6-eYV" firstAttribute="trailing" secondItem="DSV-a2-CJf" secondAttribute="trailing" constant="20" id="NKt-dV-iNe"/>
+                            <constraint firstItem="XEm-oB-27C" firstAttribute="top" secondItem="yUu-qn-d18" secondAttribute="bottom" constant="18" id="U1d-Jm-c2q"/>
+                            <constraint firstItem="fQR-B6-eYV" firstAttribute="trailing" secondItem="2lg-Xa-cMD" secondAttribute="trailing" constant="156" id="XyB-IX-eHs"/>
+                            <constraint firstItem="2lg-Xa-cMD" firstAttribute="top" secondItem="Shp-hv-rC7" secondAttribute="bottom" constant="60" id="azY-Pg-0N5"/>
+                            <constraint firstItem="Vj8-KA-P10" firstAttribute="leading" secondItem="fQR-B6-eYV" secondAttribute="leading" constant="20" id="dGN-Gt-8vE"/>
+                            <constraint firstItem="fQR-B6-eYV" firstAttribute="trailing" secondItem="fMj-Oz-GDo" secondAttribute="trailing" constant="20" id="dYM-Kh-asW"/>
+                            <constraint firstItem="Shp-hv-rC7" firstAttribute="top" secondItem="fMj-Oz-GDo" secondAttribute="bottom" constant="8" symbolic="YES" id="l9Y-27-MXV"/>
+                            <constraint firstItem="fQR-B6-eYV" firstAttribute="trailing" secondItem="yUu-qn-d18" secondAttribute="trailing" constant="20" id="m5F-uX-Eq6"/>
+                            <constraint firstItem="Vj8-KA-P10" firstAttribute="top" secondItem="fQR-B6-eYV" secondAttribute="top" id="pQT-re-pzJ"/>
+                            <constraint firstItem="2lg-Xa-cMD" firstAttribute="leading" secondItem="fQR-B6-eYV" secondAttribute="leading" constant="160" id="pZa-jM-cWx"/>
+                            <constraint firstItem="fQR-B6-eYV" firstAttribute="trailing" secondItem="XEm-oB-27C" secondAttribute="trailing" constant="174" id="qe1-DI-Z6E"/>
+                            <constraint firstItem="fMj-Oz-GDo" firstAttribute="leading" secondItem="fQR-B6-eYV" secondAttribute="leading" constant="20" id="smB-sN-imm"/>
+                            <constraint firstItem="XEm-oB-27C" firstAttribute="leading" secondItem="fQR-B6-eYV" secondAttribute="leading" constant="175" id="wb3-dS-9Pu"/>
+                            <constraint firstItem="Qyc-3r-UUi" firstAttribute="top" secondItem="Vj8-KA-P10" secondAttribute="bottom" constant="8" symbolic="YES" id="z7J-w8-gXI"/>
+                            <constraint firstItem="fQR-B6-eYV" firstAttribute="trailing" secondItem="Vj8-KA-P10" secondAttribute="trailing" constant="20" id="zH6-95-bD3"/>
+                            <constraint firstItem="Shp-hv-rC7" firstAttribute="leading" secondItem="fQR-B6-eYV" secondAttribute="leading" constant="20" id="zsd-hU-eBk"/>
+                            <constraint firstItem="DSV-a2-CJf" firstAttribute="top" secondItem="Qyc-3r-UUi" secondAttribute="bottom" constant="8" symbolic="YES" id="zuJ-Pr-AxX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="AQe-R3-R2R"/>
+                    <connections>
+                        <outlet property="CipherTextLBL" destination="Shp-hv-rC7" id="VcH-vf-EO8"/>
+                        <outlet property="KEY" destination="yUu-qn-d18" id="UVB-HY-XnT"/>
+                        <outlet property="PLAINTEXT" destination="DSV-a2-CJf" id="Efc-Xz-VA1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j0v-cW-G3F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2508.6956521739135" y="91.741071428571431"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="TMa-pR-61R">
+            <objects>
+                <viewController id="B63-SZ-1ga" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="F5V-2I-h8F">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SYMMETRIC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gGW-DI-P0o">
+                                <rect key="frame" x="20" y="213" width="374" height="23"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ASYMMETRIC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iDz-xi-z86">
+                                <rect key="frame" x="20" y="446.5" width="374" height="23"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose the method you would like to decrypt your ciphertext. " textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aHz-fH-4lH">
+                                <rect key="frame" x="20" y="136" width="374" height="41"/>
+                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ARA-vf-h0D">
+                                <rect key="frame" x="20" y="270.5" width="374" height="31"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
+                                <state key="normal" title="Caesar Cipher">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="AzW-AR-Hin" kind="show" id="YXM-Om-aEH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W8N-BZ-syJ">
+                                <rect key="frame" x="20" y="498" width="374" height="31"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
+                                <state key="normal" title="RSA">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="nQu-pf-T4X" kind="show" id="gMW-Qn-TgY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PRd-Qz-Ndc">
+                                <rect key="frame" x="20" y="88" width="374" height="40"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="25"/>
+                                <state key="normal" title="DECRYPTION METHODS">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GgP-nd-Inb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ARA-vf-h0D" firstAttribute="leading" secondItem="GgP-nd-Inb" secondAttribute="leading" constant="20" id="7gk-ns-pd3"/>
+                            <constraint firstItem="GgP-nd-Inb" firstAttribute="trailing" secondItem="gGW-DI-P0o" secondAttribute="trailing" constant="20" id="8wE-cR-YQe"/>
+                            <constraint firstItem="PRd-Qz-Ndc" firstAttribute="top" secondItem="GgP-nd-Inb" secondAttribute="top" id="AdZ-mk-zjJ"/>
+                            <constraint firstItem="W8N-BZ-syJ" firstAttribute="leading" secondItem="GgP-nd-Inb" secondAttribute="leading" constant="20" id="Ddx-eW-L23"/>
+                            <constraint firstItem="GgP-nd-Inb" firstAttribute="trailing" secondItem="ARA-vf-h0D" secondAttribute="trailing" constant="20" id="FC5-zd-LUX"/>
+                            <constraint firstItem="GgP-nd-Inb" firstAttribute="trailing" secondItem="W8N-BZ-syJ" secondAttribute="trailing" constant="20" id="JH3-4i-9IS"/>
+                            <constraint firstItem="PRd-Qz-Ndc" firstAttribute="leading" secondItem="GgP-nd-Inb" secondAttribute="leading" constant="20" id="Pcs-Qe-8Ct"/>
+                            <constraint firstItem="aHz-fH-4lH" firstAttribute="leading" secondItem="GgP-nd-Inb" secondAttribute="leading" constant="20" id="a46-Rd-Pan"/>
+                            <constraint firstItem="iDz-xi-z86" firstAttribute="top" secondItem="ARA-vf-h0D" secondAttribute="bottom" constant="145" id="d1g-en-sJQ"/>
+                            <constraint firstItem="aHz-fH-4lH" firstAttribute="top" secondItem="PRd-Qz-Ndc" secondAttribute="bottom" constant="8" symbolic="YES" id="g9r-Zg-EOQ"/>
+                            <constraint firstItem="iDz-xi-z86" firstAttribute="leading" secondItem="GgP-nd-Inb" secondAttribute="leading" constant="20" id="gkn-GM-sgQ"/>
+                            <constraint firstItem="GgP-nd-Inb" firstAttribute="trailing" secondItem="PRd-Qz-Ndc" secondAttribute="trailing" constant="20" id="kCs-I0-Ppc"/>
+                            <constraint firstItem="gGW-DI-P0o" firstAttribute="top" secondItem="aHz-fH-4lH" secondAttribute="bottom" constant="36" id="mvb-tO-poP"/>
+                            <constraint firstItem="gGW-DI-P0o" firstAttribute="leading" secondItem="GgP-nd-Inb" secondAttribute="leading" constant="20" id="o4R-WS-o5B"/>
+                            <constraint firstItem="ARA-vf-h0D" firstAttribute="top" secondItem="gGW-DI-P0o" secondAttribute="bottom" constant="34.5" id="pVS-uN-gER"/>
+                            <constraint firstItem="GgP-nd-Inb" firstAttribute="trailing" secondItem="iDz-xi-z86" secondAttribute="trailing" constant="20" id="qob-Xx-cks"/>
+                            <constraint firstItem="W8N-BZ-syJ" firstAttribute="top" secondItem="iDz-xi-z86" secondAttribute="bottom" constant="28.5" id="sVZ-vE-4tm"/>
+                            <constraint firstItem="GgP-nd-Inb" firstAttribute="trailing" secondItem="aHz-fH-4lH" secondAttribute="trailing" constant="20" id="ubr-mP-hCs"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="I9h-xu-cFm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rSj-KL-1wR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1198.5507246376812" y="738.61607142857144"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6L7-jY-Bq5">
+            <objects>
+                <navigationController id="INm-WG-r5a" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="J7O-36-MT4">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="JOu-WF-eoG" kind="relationship" relationship="rootViewController" id="FIT-Ca-6Wp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aWf-bm-NZv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="539" y="92"/>
+        </scene>
+        <!--View Controller3-->
+        <scene sceneID="RoE-87-eqU">
+            <objects>
+                <viewController id="AzW-AR-Hin" customClass="ViewController3" customModule="Encrypto" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aGg-7o-rxg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Caesar Cipher!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3uG-yC-Wmg">
+                                <rect key="frame" x="20" y="88" width="374" height="85"/>
+                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="13" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1B0-aq-R0U">
+                                <rect key="frame" x="20" y="181" width="374" height="265.5"/>
+                                <string key="text">Decrypting Caesar Cipher by providing the key that was used is very simple. Each letter in the ciphertext will be replaced by letter that is N spaces behind. An example is the Caesar Cipher of 2 which will replace C with A, D with B, and so on. Key can be negative. It is important to privide the exact key used to encrypt the message. Because of this, this technique does not provide much in terms of security.</string>
+                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PlaintextLBL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6QS-uo-d96">
+                                <rect key="frame" x="20" y="664.5" width="374" height="19"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dJS-wg-rgi">
+                                <rect key="frame" x="166" y="571.5" width="74" height="31"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
+                                <state key="normal" title="Decrypt!"/>
+                                <connections>
+                                    <action selector="DECRYPTbtn:" destination="AzW-AR-Hin" eventType="touchUpInside" id="9AU-ft-JOS"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your Ciphertext" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NxN-dX-w7b">
+                                <rect key="frame" x="20" y="454.5" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the Key (N)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HWb-ad-Ymg">
+                                <rect key="frame" x="20" y="519.5" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plaintext :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pnr-Vl-VA1">
+                                <rect key="frame" x="20" y="637.5" width="374" height="19"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rHO-Re-RIy">
+                                <rect key="frame" x="142" y="712" width="112" height="31"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
+                                <state key="normal" title="Copy Plaintext"/>
+                                <connections>
+                                    <action selector="CopyText:" destination="AzW-AR-Hin" eventType="touchUpInside" id="ZSO-Us-nwQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4va-Fm-cs8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4va-Fm-cs8" firstAttribute="trailing" secondItem="3uG-yC-Wmg" secondAttribute="trailing" constant="20" id="5Q8-LG-2LI"/>
+                            <constraint firstItem="4va-Fm-cs8" firstAttribute="trailing" secondItem="NxN-dX-w7b" secondAttribute="trailing" constant="20" id="A1r-4Z-qD9"/>
+                            <constraint firstItem="4va-Fm-cs8" firstAttribute="trailing" secondItem="1B0-aq-R0U" secondAttribute="trailing" constant="20" id="AL2-RJ-oVe"/>
+                            <constraint firstItem="6QS-uo-d96" firstAttribute="top" secondItem="Pnr-Vl-VA1" secondAttribute="bottom" constant="8" symbolic="YES" id="FB1-lF-ujy"/>
+                            <constraint firstItem="4va-Fm-cs8" firstAttribute="trailing" secondItem="Pnr-Vl-VA1" secondAttribute="trailing" constant="20" id="J6V-uz-ceX"/>
+                            <constraint firstItem="6QS-uo-d96" firstAttribute="leading" secondItem="4va-Fm-cs8" secondAttribute="leading" constant="20" id="JEf-KY-V6b"/>
+                            <constraint firstItem="4va-Fm-cs8" firstAttribute="trailing" secondItem="6QS-uo-d96" secondAttribute="trailing" constant="20" id="Jww-iy-jVx"/>
+                            <constraint firstItem="1B0-aq-R0U" firstAttribute="leading" secondItem="4va-Fm-cs8" secondAttribute="leading" constant="20" id="Qrx-WQ-1XC"/>
+                            <constraint firstItem="4va-Fm-cs8" firstAttribute="trailing" secondItem="dJS-wg-rgi" secondAttribute="trailing" constant="174" id="RM3-nU-YU2"/>
+                            <constraint firstItem="Pnr-Vl-VA1" firstAttribute="top" secondItem="dJS-wg-rgi" secondAttribute="bottom" constant="35" id="SJK-m8-zxu"/>
+                            <constraint firstItem="NxN-dX-w7b" firstAttribute="leading" secondItem="4va-Fm-cs8" secondAttribute="leading" constant="20" id="UwC-gf-K7f"/>
+                            <constraint firstItem="rHO-Re-RIy" firstAttribute="top" secondItem="6QS-uo-d96" secondAttribute="bottom" constant="28.5" id="Zqi-AN-DX8"/>
+                            <constraint firstItem="HWb-ad-Ymg" firstAttribute="top" secondItem="NxN-dX-w7b" secondAttribute="bottom" constant="31" id="cYm-7z-0eZ"/>
+                            <constraint firstItem="3uG-yC-Wmg" firstAttribute="leading" secondItem="4va-Fm-cs8" secondAttribute="leading" constant="20" id="ccl-1l-uej"/>
+                            <constraint firstItem="dJS-wg-rgi" firstAttribute="leading" secondItem="4va-Fm-cs8" secondAttribute="leading" constant="166" id="d0F-LT-d1F"/>
+                            <constraint firstItem="NxN-dX-w7b" firstAttribute="top" secondItem="1B0-aq-R0U" secondAttribute="bottom" constant="8" symbolic="YES" id="dTy-5X-hve"/>
+                            <constraint firstItem="rHO-Re-RIy" firstAttribute="leading" secondItem="4va-Fm-cs8" secondAttribute="leading" constant="142" id="gQ8-0t-7a0"/>
+                            <constraint firstItem="HWb-ad-Ymg" firstAttribute="leading" secondItem="4va-Fm-cs8" secondAttribute="leading" constant="20" id="hFa-O1-ADT"/>
+                            <constraint firstItem="dJS-wg-rgi" firstAttribute="top" secondItem="HWb-ad-Ymg" secondAttribute="bottom" constant="18" id="hl1-LC-NxM"/>
+                            <constraint firstItem="4va-Fm-cs8" firstAttribute="trailing" secondItem="rHO-Re-RIy" secondAttribute="trailing" constant="160" id="hv8-0r-yRs"/>
+                            <constraint firstItem="3uG-yC-Wmg" firstAttribute="top" secondItem="4va-Fm-cs8" secondAttribute="top" id="o77-yF-Mjb"/>
+                            <constraint firstItem="4va-Fm-cs8" firstAttribute="trailing" secondItem="HWb-ad-Ymg" secondAttribute="trailing" constant="20" id="rma-Za-lW8"/>
+                            <constraint firstItem="1B0-aq-R0U" firstAttribute="top" secondItem="3uG-yC-Wmg" secondAttribute="bottom" constant="8" symbolic="YES" id="y6v-gM-iW2"/>
+                            <constraint firstItem="Pnr-Vl-VA1" firstAttribute="leading" secondItem="4va-Fm-cs8" secondAttribute="leading" constant="20" id="z8R-o4-Yy3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="231-6Z-zmb"/>
+                    <connections>
+                        <outlet property="CIPHERTEXT" destination="NxN-dX-w7b" id="ZxY-ZC-HSg"/>
+                        <outlet property="KEY" destination="HWb-ad-Ymg" id="DpW-RH-mkF"/>
+                        <outlet property="PlaintextLBL" destination="6QS-uo-d96" id="DA2-fM-Vag"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o8d-iD-WAu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1853.6231884057972" y="738.61607142857144"/>
+        </scene>
+        <!--View Controller4-->
+        <scene sceneID="hZk-qk-9UN">
+            <objects>
+                <viewController id="RSj-FR-jic" customClass="ViewController4" customModule="Encrypto" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uM3-KG-eFT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RSA!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vWQ-2s-ddt">
+                                <rect key="frame" x="20" y="88" width="374" height="85"/>
+                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="21" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k7w-TS-evq">
+                                <rect key="frame" x="20" y="181" width="374" height="428.5"/>
+                                <string key="text">The Rivest-Shamir-Adleman public key encryption algorithm is a great encryption technique. Each person or entity has a public key and a private key. The public key is in fact public and anyone can send you a message by encrypting the message with your public key. Because of this, only your corresponding private key can decrypt the message. No one but you know your private key. This ensures confidentiality, non-repudiation, and security. To send someone a message, you have to encrypt using their public key. For this, a simplifed RSA is used and you can generate your own keys, and experiement encrypting and decrypting. The cipher would look like an array of numbers.</string>
+                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PubKey" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tqe-20-ccD">
+                                <rect key="frame" x="20" y="676" width="374" height="20"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PrivKey" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JlR-SS-D5y">
+                                <rect key="frame" x="20" y="702" width="374" height="20"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LAV-Y8-0Vi">
+                                <rect key="frame" x="58" y="755" width="298" height="31"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
+                                <state key="normal" title="I want to encrypt using a Public Key!"/>
+                                <connections>
+                                    <segue destination="jnI-EM-4Pu" kind="show" id="xH6-wC-RUe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ee-6A-x9Z">
+                                <rect key="frame" x="58" y="627" width="298" height="31"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
+                                <state key="normal" title="Generate My Keys!"/>
+                                <connections>
+                                    <action selector="Generate:" destination="RSj-FR-jic" eventType="touchUpInside" id="ElM-Kx-7zr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="stE-jc-yd7">
+                                <rect key="frame" x="20" y="831" width="127" height="31"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
+                                <state key="normal" title="Copy Public Key"/>
+                                <connections>
+                                    <action selector="CopyPubKey:" destination="RSj-FR-jic" eventType="touchUpInside" id="eVO-OG-pEY"/>
+                                    <action selector="CopyText:" destination="Vax-vo-cq0" eventType="touchUpInside" id="1Zz-wT-0aD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ajL-Rl-0gA">
+                                <rect key="frame" x="260" y="831" width="134" height="31"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
+                                <state key="normal" title="Copy Private Key"/>
+                                <connections>
+                                    <action selector="CopyPrivKey:" destination="RSj-FR-jic" eventType="touchUpInside" id="hLl-qQ-Ruh"/>
+                                    <action selector="CopyText:" destination="Vax-vo-cq0" eventType="touchUpInside" id="kmD-no-ndg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gSG-Vg-Lcg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gSG-Vg-Lcg" firstAttribute="trailing" secondItem="Tqe-20-ccD" secondAttribute="trailing" constant="20" id="0nr-lC-Jzm"/>
+                            <constraint firstItem="vWQ-2s-ddt" firstAttribute="top" secondItem="gSG-Vg-Lcg" secondAttribute="top" id="1Ta-74-418"/>
+                            <constraint firstItem="JlR-SS-D5y" firstAttribute="leading" secondItem="gSG-Vg-Lcg" secondAttribute="leading" constant="20" id="5my-hj-fnN"/>
+                            <constraint firstItem="8ee-6A-x9Z" firstAttribute="top" secondItem="k7w-TS-evq" secondAttribute="bottom" constant="17.5" id="6dT-WP-l4l"/>
+                            <constraint firstItem="LAV-Y8-0Vi" firstAttribute="top" secondItem="JlR-SS-D5y" secondAttribute="bottom" constant="33" id="835-gd-gWe"/>
+                            <constraint firstItem="gSG-Vg-Lcg" firstAttribute="trailing" secondItem="vWQ-2s-ddt" secondAttribute="trailing" constant="20" id="BXT-pz-sfq"/>
+                            <constraint firstItem="stE-jc-yd7" firstAttribute="leading" secondItem="gSG-Vg-Lcg" secondAttribute="leading" constant="20" id="FDD-hP-R3F"/>
+                            <constraint firstItem="Tqe-20-ccD" firstAttribute="leading" secondItem="gSG-Vg-Lcg" secondAttribute="leading" constant="20" id="FcQ-Vh-SFP"/>
+                            <constraint firstItem="JlR-SS-D5y" firstAttribute="top" secondItem="Tqe-20-ccD" secondAttribute="bottom" constant="6" id="JBQ-aQ-yXb"/>
+                            <constraint firstItem="k7w-TS-evq" firstAttribute="leading" secondItem="gSG-Vg-Lcg" secondAttribute="leading" constant="20" id="M08-nL-HXt"/>
+                            <constraint firstItem="Tqe-20-ccD" firstAttribute="top" secondItem="8ee-6A-x9Z" secondAttribute="bottom" constant="18" id="RBO-ly-ZMi"/>
+                            <constraint firstItem="gSG-Vg-Lcg" firstAttribute="trailing" secondItem="k7w-TS-evq" secondAttribute="trailing" constant="20" id="Rd9-JV-kB9"/>
+                            <constraint firstItem="ajL-Rl-0gA" firstAttribute="top" secondItem="LAV-Y8-0Vi" secondAttribute="bottom" constant="45" id="SMd-eB-UNu"/>
+                            <constraint firstItem="stE-jc-yd7" firstAttribute="top" secondItem="LAV-Y8-0Vi" secondAttribute="bottom" constant="45" id="VYq-IT-Ct6"/>
+                            <constraint firstItem="vWQ-2s-ddt" firstAttribute="leading" secondItem="gSG-Vg-Lcg" secondAttribute="leading" constant="20" id="c9V-gW-eDg"/>
+                            <constraint firstItem="gSG-Vg-Lcg" firstAttribute="trailing" secondItem="LAV-Y8-0Vi" secondAttribute="trailing" constant="58" id="cDI-WB-2TU"/>
+                            <constraint firstItem="gSG-Vg-Lcg" firstAttribute="trailing" secondItem="8ee-6A-x9Z" secondAttribute="trailing" constant="58" id="cvk-6o-Mve"/>
+                            <constraint firstItem="gSG-Vg-Lcg" firstAttribute="trailing" secondItem="JlR-SS-D5y" secondAttribute="trailing" constant="20" id="gSA-CJ-2Tz"/>
+                            <constraint firstItem="k7w-TS-evq" firstAttribute="top" secondItem="vWQ-2s-ddt" secondAttribute="bottom" constant="8" symbolic="YES" id="ifG-iF-z9R"/>
+                            <constraint firstItem="ajL-Rl-0gA" firstAttribute="leading" secondItem="stE-jc-yd7" secondAttribute="trailing" constant="113" id="j7a-IL-J6P"/>
+                            <constraint firstItem="gSG-Vg-Lcg" firstAttribute="trailing" secondItem="ajL-Rl-0gA" secondAttribute="trailing" constant="20" id="lcS-d9-o0c"/>
+                            <constraint firstItem="LAV-Y8-0Vi" firstAttribute="leading" secondItem="gSG-Vg-Lcg" secondAttribute="leading" constant="58" id="p8B-e8-SEz"/>
+                            <constraint firstItem="8ee-6A-x9Z" firstAttribute="leading" secondItem="gSG-Vg-Lcg" secondAttribute="leading" constant="58" id="qUY-0e-Jjd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Kq9-Yo-wIc"/>
+                    <connections>
+                        <outlet property="PrivKeyLBL" destination="JlR-SS-D5y" id="6O3-2P-bXc"/>
+                        <outlet property="PubKeyLBL" destination="Tqe-20-ccD" id="7hw-bI-p8d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JCH-fw-grY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3137.68115942029" y="91.741071428571431"/>
+        </scene>
+        <!--View Controller5-->
+        <scene sceneID="pdi-es-w3c">
+            <objects>
+                <viewController id="jnI-EM-4Pu" customClass="ViewController5" customModule="Encrypto" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fVa-KJ-8SD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RSA!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nCy-nG-ZO2">
+                                <rect key="frame" x="20" y="88" width="374" height="85"/>
+                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To encrypt, simply provide the public key and the message. An example is shown below." textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="21" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="50r-mc-up5">
+                                <rect key="frame" x="20" y="181" width="374" height="61.5"/>
+                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ss0-P8-DDq">
+                                <rect key="frame" x="51" y="445" width="65" height="31"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
+                                <state key="normal" title="Encrypt!"/>
+                                <connections>
+                                    <action selector="EncryptBTN:" destination="jnI-EM-4Pu" eventType="touchUpInside" id="cfZ-t7-xXa"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your Message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9ct-M9-Qqh">
+                                <rect key="frame" x="20" y="303.5" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Receiver's Public Key, i.e. (e,n)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l9K-Ka-Off">
+                                <rect key="frame" x="20" y="375.5" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CipherTextLBL" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q2T-K2-TqE">
+                                <rect key="frame" x="20" y="539.5" width="374" height="19"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ciphertext :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xH5-rT-7Jz">
+                                <rect key="frame" x="20" y="512.5" width="374" height="19"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mxp-mH-KYT">
+                                <rect key="frame" x="234" y="445" width="102" height="31"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
+                                <state key="normal" title="Copy Cipher!"/>
+                                <connections>
+                                    <action selector="CopyCipher:" destination="jnI-EM-4Pu" eventType="touchUpInside" id="NYp-2c-2iQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pVj-XY-Gqc">
+                                <rect key="frame" x="111" y="831" width="192" height="31"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
+                                <state key="normal" title="Click Me for a Challenge!"/>
+                                <connections>
+                                    <segue destination="FaU-ZG-FMn" kind="show" id="Pgp-92-SMQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NNZ-xO-j6c"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NNZ-xO-j6c" firstAttribute="trailing" secondItem="pVj-XY-Gqc" secondAttribute="trailing" constant="111" id="1Kb-fa-Dd3"/>
+                            <constraint firstItem="NNZ-xO-j6c" firstAttribute="trailing" secondItem="50r-mc-up5" secondAttribute="trailing" constant="20" id="3ZN-ih-Nzc"/>
+                            <constraint firstItem="50r-mc-up5" firstAttribute="top" secondItem="nCy-nG-ZO2" secondAttribute="bottom" constant="8" symbolic="YES" id="6SA-4X-ypK"/>
+                            <constraint firstItem="Ss0-P8-DDq" firstAttribute="top" secondItem="l9K-Ka-Off" secondAttribute="bottom" constant="35.5" id="6bu-gX-3oh"/>
+                            <constraint firstItem="l9K-Ka-Off" firstAttribute="leading" secondItem="NNZ-xO-j6c" secondAttribute="leading" constant="20" id="BgF-ga-PM7"/>
+                            <constraint firstItem="xH5-rT-7Jz" firstAttribute="top" secondItem="Ss0-P8-DDq" secondAttribute="bottom" constant="36.5" id="H6h-nc-cHr"/>
+                            <constraint firstItem="Mxp-mH-KYT" firstAttribute="top" secondItem="l9K-Ka-Off" secondAttribute="bottom" constant="35.5" id="IE8-Nt-fKr"/>
+                            <constraint firstItem="NNZ-xO-j6c" firstAttribute="trailing" secondItem="l9K-Ka-Off" secondAttribute="trailing" constant="20" id="Lwt-xb-5um"/>
+                            <constraint firstItem="9ct-M9-Qqh" firstAttribute="leading" secondItem="NNZ-xO-j6c" secondAttribute="leading" constant="20" id="Msm-Rh-H8C"/>
+                            <constraint firstItem="NNZ-xO-j6c" firstAttribute="trailing" secondItem="xH5-rT-7Jz" secondAttribute="trailing" constant="20" id="PXJ-pg-LJS"/>
+                            <constraint firstItem="Q2T-K2-TqE" firstAttribute="top" secondItem="xH5-rT-7Jz" secondAttribute="bottom" constant="8" symbolic="YES" id="Sgg-yg-1Ys"/>
+                            <constraint firstItem="nCy-nG-ZO2" firstAttribute="leading" secondItem="NNZ-xO-j6c" secondAttribute="leading" constant="20" id="UQV-v6-gq9"/>
+                            <constraint firstItem="l9K-Ka-Off" firstAttribute="top" secondItem="9ct-M9-Qqh" secondAttribute="bottom" constant="38" id="WH6-dC-rrW"/>
+                            <constraint firstItem="xH5-rT-7Jz" firstAttribute="leading" secondItem="NNZ-xO-j6c" secondAttribute="leading" constant="20" id="WZ2-ab-ngo"/>
+                            <constraint firstItem="NNZ-xO-j6c" firstAttribute="bottom" secondItem="pVj-XY-Gqc" secondAttribute="bottom" id="Ywg-8r-MUj"/>
+                            <constraint firstItem="NNZ-xO-j6c" firstAttribute="trailing" secondItem="nCy-nG-ZO2" secondAttribute="trailing" constant="20" id="aHH-OS-28l"/>
+                            <constraint firstItem="Q2T-K2-TqE" firstAttribute="leading" secondItem="NNZ-xO-j6c" secondAttribute="leading" constant="20" id="cMr-i2-5j3"/>
+                            <constraint firstItem="NNZ-xO-j6c" firstAttribute="trailing" secondItem="Mxp-mH-KYT" secondAttribute="trailing" constant="78" id="cmZ-yI-Jrq"/>
+                            <constraint firstItem="NNZ-xO-j6c" firstAttribute="trailing" secondItem="Q2T-K2-TqE" secondAttribute="trailing" constant="20" id="dch-Ls-Y82"/>
+                            <constraint firstItem="Q2T-K2-TqE" firstAttribute="top" secondItem="xH5-rT-7Jz" secondAttribute="bottom" constant="8" symbolic="YES" id="fBY-k3-cVR"/>
+                            <constraint firstItem="50r-mc-up5" firstAttribute="leading" secondItem="NNZ-xO-j6c" secondAttribute="leading" constant="20" id="h6g-g6-o9u"/>
+                            <constraint firstItem="9ct-M9-Qqh" firstAttribute="top" secondItem="50r-mc-up5" secondAttribute="bottom" constant="61" id="j3a-hc-aLC"/>
+                            <constraint firstItem="xH5-rT-7Jz" firstAttribute="top" secondItem="Mxp-mH-KYT" secondAttribute="bottom" constant="36.5" id="mBJ-Yi-Ecj"/>
+                            <constraint firstItem="pVj-XY-Gqc" firstAttribute="leading" secondItem="NNZ-xO-j6c" secondAttribute="leading" constant="111" id="oTD-eH-ozT"/>
+                            <constraint firstItem="NNZ-xO-j6c" firstAttribute="trailing" secondItem="9ct-M9-Qqh" secondAttribute="trailing" constant="20" id="wO3-gl-QZH"/>
+                            <constraint firstItem="nCy-nG-ZO2" firstAttribute="top" secondItem="NNZ-xO-j6c" secondAttribute="top" id="wtN-xG-ubh"/>
+                            <constraint firstItem="Ss0-P8-DDq" firstAttribute="leading" secondItem="NNZ-xO-j6c" secondAttribute="leading" constant="51" id="xxp-ge-9Em"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="UYS-3Y-Gks"/>
+                    <connections>
+                        <outlet property="CipherTextLBL" destination="Q2T-K2-TqE" id="jB9-24-47N"/>
+                        <outlet property="MessageLBL" destination="9ct-M9-Qqh" id="bft-3Y-0Ez"/>
+                        <outlet property="PubKeyLBL" destination="l9K-Ka-Off" id="c56-Ax-iqC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jix-18-hHn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3798.5507246376815" y="91.741071428571431"/>
+        </scene>
+        <!--View Controller6-->
+        <scene sceneID="Y6O-Uv-ZfS">
+            <objects>
+                <viewController id="FaU-ZG-FMn" customClass="ViewController6" customModule="Encrypto" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yJi-28-ZbO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RSA Secret Challenge!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LI1-WT-f1F">
+                                <rect key="frame" x="20" y="88" width="374" height="85"/>
+                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="21" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wEV-NY-1lg">
+                                <rect key="frame" x="20" y="181" width="374" height="163.5"/>
+                                <string key="text">The North Pole has received a top secret letter containing an ecrypted message from one of their secret spies. Help Santa by decrypting this message. Santa's private key is (157,2773). The fate of Christmas is in your hands!</string>
+                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CipherTextLBL" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="30" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cXp-cT-xw5">
+                                <rect key="frame" x="20" y="352" width="374" height="19"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QPx-Iy-gxH">
+                                <rect key="frame" x="348" y="319" width="46" height="31"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
+                                <state key="normal" title="Copy!"/>
+                                <connections>
+                                    <action selector="CopyCipher:" destination="FaU-ZG-FMn" eventType="touchUpInside" id="vEY-lG-uUr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eeY-DW-J6s"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cXp-cT-xw5" firstAttribute="top" secondItem="QPx-Iy-gxH" secondAttribute="bottom" constant="2" id="C8B-f5-3oT"/>
+                            <constraint firstItem="LI1-WT-f1F" firstAttribute="leading" secondItem="eeY-DW-J6s" secondAttribute="leading" constant="20" id="GZE-Mr-CT0"/>
+                            <constraint firstItem="eeY-DW-J6s" firstAttribute="trailing" secondItem="wEV-NY-1lg" secondAttribute="trailing" constant="20" id="IgL-C5-n6o"/>
+                            <constraint firstItem="cXp-cT-xw5" firstAttribute="top" secondItem="wEV-NY-1lg" secondAttribute="bottom" constant="7.5" id="MMB-rV-Vp5"/>
+                            <constraint firstItem="eeY-DW-J6s" firstAttribute="trailing" secondItem="QPx-Iy-gxH" secondAttribute="trailing" constant="20" id="NEg-3D-OTD"/>
+                            <constraint firstItem="wEV-NY-1lg" firstAttribute="top" secondItem="LI1-WT-f1F" secondAttribute="bottom" constant="8" symbolic="YES" id="Wpb-CP-uqM"/>
+                            <constraint firstItem="eeY-DW-J6s" firstAttribute="trailing" secondItem="LI1-WT-f1F" secondAttribute="trailing" constant="20" id="Zmw-fY-M9T"/>
+                            <constraint firstItem="wEV-NY-1lg" firstAttribute="leading" secondItem="eeY-DW-J6s" secondAttribute="leading" constant="20" id="ZoS-lB-xHu"/>
+                            <constraint firstItem="eeY-DW-J6s" firstAttribute="trailing" secondItem="cXp-cT-xw5" secondAttribute="trailing" constant="20" id="aeA-U7-7ie"/>
+                            <constraint firstItem="cXp-cT-xw5" firstAttribute="leading" secondItem="eeY-DW-J6s" secondAttribute="leading" constant="20" id="feo-F1-sKL"/>
+                            <constraint firstItem="LI1-WT-f1F" firstAttribute="top" secondItem="eeY-DW-J6s" secondAttribute="top" id="ley-iM-it8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="r2U-5M-yIu"/>
+                    <connections>
+                        <outlet property="CipherTextLBL" destination="cXp-cT-xw5" id="Dhd-sU-edN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fti-5f-fC8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4441" y="92"/>
+        </scene>
+        <!--View Controller7-->
+        <scene sceneID="QPG-ge-KV5">
+            <objects>
+                <viewController id="nQu-pf-T4X" customClass="ViewController7" customModule="Encrypto" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mvy-id-Mni">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RSA!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="juh-PH-gZS">
+                                <rect key="frame" x="20" y="88" width="374" height="85"/>
+                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="21" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I7m-q3-6YP">
+                                <rect key="frame" x="20" y="181" width="374" height="143"/>
+                                <string key="text">To decrypt, simply provide the corresponding private key of the user and the message. If you have received a message, use your private key. If you encrypted a message using your public key, decrypt with your private key.</string>
+                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cgH-KO-Aeb">
+                                <rect key="frame" x="53" y="467" width="66" height="31"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
+                                <state key="normal" title="Decrypt!"/>
+                                <connections>
+                                    <action selector="DecryptBTN:" destination="nQu-pf-T4X" eventType="touchUpInside" id="jzL-5t-YFQ"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the ciphertext" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MCR-96-ZgR">
+                                <rect key="frame" x="20" y="345" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Receiver's Private Key, i.e. (d,n)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OrG-ec-7O5">
+                                <rect key="frame" x="20" y="417" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fd5-5k-wps">
+                                <rect key="frame" x="20" y="506" width="374" height="19"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rN8-Kb-8Qo">
+                                <rect key="frame" x="227" y="467" width="117" height="31"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
+                                <state key="normal" title="Copy Plaintext!"/>
+                                <connections>
+                                    <action selector="CopyMessage:" destination="nQu-pf-T4X" eventType="touchUpInside" id="d7O-4U-Pv4"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PlainTextLBL" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nZ4-qv-sg2">
+                                <rect key="frame" x="20" y="533" width="374" height="19"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BeC-id-cYd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fd5-5k-wps" firstAttribute="leading" secondItem="BeC-id-cYd" secondAttribute="leading" constant="20" id="6pP-Lz-rC6"/>
+                            <constraint firstItem="fd5-5k-wps" firstAttribute="top" secondItem="rN8-Kb-8Qo" secondAttribute="bottom" constant="8" symbolic="YES" id="7np-EF-Ogq"/>
+                            <constraint firstItem="fd5-5k-wps" firstAttribute="top" secondItem="cgH-KO-Aeb" secondAttribute="bottom" constant="8" symbolic="YES" id="95X-FV-fw1"/>
+                            <constraint firstItem="nZ4-qv-sg2" firstAttribute="top" secondItem="fd5-5k-wps" secondAttribute="bottom" constant="8" symbolic="YES" id="F63-qY-ugO"/>
+                            <constraint firstItem="OrG-ec-7O5" firstAttribute="leading" secondItem="BeC-id-cYd" secondAttribute="leading" constant="20" id="FWx-ox-CYH"/>
+                            <constraint firstItem="MCR-96-ZgR" firstAttribute="top" secondItem="I7m-q3-6YP" secondAttribute="bottom" constant="21" id="Gi7-s4-Cjc"/>
+                            <constraint firstItem="OrG-ec-7O5" firstAttribute="top" secondItem="MCR-96-ZgR" secondAttribute="bottom" constant="38" id="JLF-He-Eeo"/>
+                            <constraint firstItem="BeC-id-cYd" firstAttribute="trailing" secondItem="rN8-Kb-8Qo" secondAttribute="trailing" constant="70" id="ND5-3t-Osp"/>
+                            <constraint firstItem="MCR-96-ZgR" firstAttribute="leading" secondItem="BeC-id-cYd" secondAttribute="leading" constant="20" id="NnU-q0-hXc"/>
+                            <constraint firstItem="BeC-id-cYd" firstAttribute="trailing" secondItem="juh-PH-gZS" secondAttribute="trailing" constant="20" id="NsJ-LD-0WV"/>
+                            <constraint firstItem="juh-PH-gZS" firstAttribute="leading" secondItem="BeC-id-cYd" secondAttribute="leading" constant="20" id="PMb-hw-VmG"/>
+                            <constraint firstItem="BeC-id-cYd" firstAttribute="trailing" secondItem="fd5-5k-wps" secondAttribute="trailing" constant="20" id="Wx8-WO-2MA"/>
+                            <constraint firstItem="I7m-q3-6YP" firstAttribute="top" secondItem="juh-PH-gZS" secondAttribute="bottom" constant="8" symbolic="YES" id="Y1f-hp-EHh"/>
+                            <constraint firstItem="rN8-Kb-8Qo" firstAttribute="top" secondItem="OrG-ec-7O5" secondAttribute="bottom" constant="16" id="Z8o-hg-DlW"/>
+                            <constraint firstItem="nZ4-qv-sg2" firstAttribute="leading" secondItem="BeC-id-cYd" secondAttribute="leading" constant="20" id="ae2-tG-AiM"/>
+                            <constraint firstItem="BeC-id-cYd" firstAttribute="trailing" secondItem="OrG-ec-7O5" secondAttribute="trailing" constant="20" id="bLq-Kw-ckh"/>
+                            <constraint firstItem="BeC-id-cYd" firstAttribute="trailing" secondItem="I7m-q3-6YP" secondAttribute="trailing" constant="20" id="bNZ-Cw-6hb"/>
+                            <constraint firstItem="BeC-id-cYd" firstAttribute="trailing" secondItem="MCR-96-ZgR" secondAttribute="trailing" constant="20" id="ecc-PE-p1m"/>
+                            <constraint firstItem="I7m-q3-6YP" firstAttribute="leading" secondItem="BeC-id-cYd" secondAttribute="leading" constant="20" id="jKI-EZ-C2Q"/>
+                            <constraint firstItem="juh-PH-gZS" firstAttribute="top" secondItem="BeC-id-cYd" secondAttribute="top" id="mKs-4d-obS"/>
+                            <constraint firstItem="BeC-id-cYd" firstAttribute="trailing" secondItem="nZ4-qv-sg2" secondAttribute="trailing" constant="20" id="syQ-j5-Aph"/>
+                            <constraint firstItem="cgH-KO-Aeb" firstAttribute="leading" secondItem="BeC-id-cYd" secondAttribute="leading" constant="53" id="vOa-4b-PTu"/>
+                            <constraint firstItem="cgH-KO-Aeb" firstAttribute="top" secondItem="OrG-ec-7O5" secondAttribute="bottom" constant="16" id="wfa-7D-jWH"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="zWg-jh-jLE"/>
+                    <connections>
+                        <outlet property="CipherTextLBL" destination="MCR-96-ZgR" id="0Jr-Cb-Jyu"/>
+                        <outlet property="PlainTextLBL" destination="nZ4-qv-sg2" id="yDb-Ws-lAE"/>
+                        <outlet property="PrivKeyLBL" destination="OrG-ec-7O5" id="frI-Zx-MSE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NSJ-qO-qSz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2509" y="739"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

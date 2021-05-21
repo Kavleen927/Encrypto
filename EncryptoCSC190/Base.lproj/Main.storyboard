@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="G52-a7-XFN">
             <objects>
-                <viewController id="JOu-WF-eoG" customClass="ViewController" customModule="Encrypto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="JOu-WF-eoG" customClass="ViewController" customModule="EncryptoCSC190" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EyN-oH-jr1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -94,7 +94,7 @@
         <!--View Controller-->
         <scene sceneID="pcG-hs-8vS">
             <objects>
-                <viewController id="dVP-oi-nzc" customClass="ViewController" customModule="Encrypto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dVP-oi-nzc" customClass="ViewController" customModule="EncryptoCSC190" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bTo-CA-Tk5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -146,10 +146,18 @@
                                     <segue destination="RSj-FR-jic" kind="show" id="gAN-Om-zpe"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FDe-mV-dN3">
+                                <rect key="frame" x="20" y="781" width="374" height="81"/>
+                                <string key="text">"Well, it’s no secret that the best thing about a secret is secretly telling someone your secret, thereby, secretly adding another secret to their secret collection of secret, secretly."            – Spongebob</string>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xNV-2h-vND"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="xNV-2h-vND" firstAttribute="bottom" secondItem="FDe-mV-dN3" secondAttribute="bottom" id="1ec-J7-CLw"/>
                             <constraint firstItem="ER3-p1-5Yo" firstAttribute="leading" secondItem="xNV-2h-vND" secondAttribute="leading" constant="20" id="73n-iO-BXA"/>
                             <constraint firstItem="gQk-rb-HDc" firstAttribute="leading" secondItem="xNV-2h-vND" secondAttribute="leading" constant="20" id="Aac-cv-bVl"/>
                             <constraint firstItem="xNV-2h-vND" firstAttribute="trailing" secondItem="V24-Qy-Hb9" secondAttribute="trailing" constant="20" id="GCb-05-gNQ"/>
@@ -158,6 +166,8 @@
                             <constraint firstItem="ER3-p1-5Yo" firstAttribute="top" secondItem="V24-Qy-Hb9" secondAttribute="bottom" constant="145" id="Kef-ZK-7a5"/>
                             <constraint firstItem="xNV-2h-vND" firstAttribute="trailing" secondItem="Gez-pW-zoR" secondAttribute="trailing" constant="20" id="N4w-QW-qln"/>
                             <constraint firstItem="8Os-GQ-PAb" firstAttribute="top" secondItem="Hfm-kq-tRH" secondAttribute="bottom" constant="8" symbolic="YES" id="NyV-ik-Zt9"/>
+                            <constraint firstItem="FDe-mV-dN3" firstAttribute="leading" secondItem="xNV-2h-vND" secondAttribute="leading" constant="20" id="T8F-uX-M5n"/>
+                            <constraint firstItem="xNV-2h-vND" firstAttribute="trailing" secondItem="FDe-mV-dN3" secondAttribute="trailing" constant="20" id="UIj-Aa-PNX"/>
                             <constraint firstItem="xNV-2h-vND" firstAttribute="trailing" secondItem="8Os-GQ-PAb" secondAttribute="trailing" constant="20" id="UrG-OY-BIe"/>
                             <constraint firstItem="Gez-pW-zoR" firstAttribute="leading" secondItem="xNV-2h-vND" secondAttribute="leading" constant="20" id="aDe-Rc-g4d"/>
                             <constraint firstItem="xNV-2h-vND" firstAttribute="trailing" secondItem="Hfm-kq-tRH" secondAttribute="trailing" constant="20" id="aE0-Cm-MXR"/>
@@ -179,7 +189,7 @@
         <!--View Controller2-->
         <scene sceneID="UNb-iY-iWy">
             <objects>
-                <viewController id="Vax-vo-cq0" customClass="ViewController2" customModule="Encrypto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Vax-vo-cq0" customClass="ViewController2" customModule="EncryptoCSC190" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hSI-2Z-VgG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -329,6 +339,13 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ch-wc-Dro">
+                                <rect key="frame" x="20" y="801" width="374" height="61"/>
+                                <string key="text">“It takes 20 years to build a reputation and few minutes of cyber-incident to ruin it.”                                                                                                                   – Stephane Nappo.</string>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GgP-nd-Inb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -337,10 +354,12 @@
                             <constraint firstItem="GgP-nd-Inb" firstAttribute="trailing" secondItem="gGW-DI-P0o" secondAttribute="trailing" constant="20" id="8wE-cR-YQe"/>
                             <constraint firstItem="PRd-Qz-Ndc" firstAttribute="top" secondItem="GgP-nd-Inb" secondAttribute="top" id="AdZ-mk-zjJ"/>
                             <constraint firstItem="W8N-BZ-syJ" firstAttribute="leading" secondItem="GgP-nd-Inb" secondAttribute="leading" constant="20" id="Ddx-eW-L23"/>
+                            <constraint firstItem="GgP-nd-Inb" firstAttribute="bottom" secondItem="8ch-wc-Dro" secondAttribute="bottom" id="Dlc-gY-CMv"/>
                             <constraint firstItem="GgP-nd-Inb" firstAttribute="trailing" secondItem="ARA-vf-h0D" secondAttribute="trailing" constant="20" id="FC5-zd-LUX"/>
                             <constraint firstItem="GgP-nd-Inb" firstAttribute="trailing" secondItem="W8N-BZ-syJ" secondAttribute="trailing" constant="20" id="JH3-4i-9IS"/>
                             <constraint firstItem="PRd-Qz-Ndc" firstAttribute="leading" secondItem="GgP-nd-Inb" secondAttribute="leading" constant="20" id="Pcs-Qe-8Ct"/>
                             <constraint firstItem="aHz-fH-4lH" firstAttribute="leading" secondItem="GgP-nd-Inb" secondAttribute="leading" constant="20" id="a46-Rd-Pan"/>
+                            <constraint firstItem="8ch-wc-Dro" firstAttribute="leading" secondItem="GgP-nd-Inb" secondAttribute="leading" constant="20" id="cza-BQ-dmr"/>
                             <constraint firstItem="iDz-xi-z86" firstAttribute="top" secondItem="ARA-vf-h0D" secondAttribute="bottom" constant="145" id="d1g-en-sJQ"/>
                             <constraint firstItem="aHz-fH-4lH" firstAttribute="top" secondItem="PRd-Qz-Ndc" secondAttribute="bottom" constant="8" symbolic="YES" id="g9r-Zg-EOQ"/>
                             <constraint firstItem="iDz-xi-z86" firstAttribute="leading" secondItem="GgP-nd-Inb" secondAttribute="leading" constant="20" id="gkn-GM-sgQ"/>
@@ -351,6 +370,7 @@
                             <constraint firstItem="GgP-nd-Inb" firstAttribute="trailing" secondItem="iDz-xi-z86" secondAttribute="trailing" constant="20" id="qob-Xx-cks"/>
                             <constraint firstItem="W8N-BZ-syJ" firstAttribute="top" secondItem="iDz-xi-z86" secondAttribute="bottom" constant="28.5" id="sVZ-vE-4tm"/>
                             <constraint firstItem="GgP-nd-Inb" firstAttribute="trailing" secondItem="aHz-fH-4lH" secondAttribute="trailing" constant="20" id="ubr-mP-hCs"/>
+                            <constraint firstItem="GgP-nd-Inb" firstAttribute="trailing" secondItem="8ch-wc-Dro" secondAttribute="trailing" constant="20" id="y0O-Kz-5MU"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="I9h-xu-cFm"/>
@@ -378,7 +398,7 @@
         <!--View Controller3-->
         <scene sceneID="RoE-87-eqU">
             <objects>
-                <viewController id="AzW-AR-Hin" customClass="ViewController3" customModule="Encrypto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="AzW-AR-Hin" customClass="ViewController3" customModule="EncryptoCSC190" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aGg-7o-rxg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -478,7 +498,7 @@
         <!--View Controller4-->
         <scene sceneID="hZk-qk-9UN">
             <objects>
-                <viewController id="RSj-FR-jic" customClass="ViewController4" customModule="Encrypto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="RSj-FR-jic" customClass="ViewController4" customModule="EncryptoCSC190" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uM3-KG-eFT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -584,7 +604,7 @@
         <!--View Controller5-->
         <scene sceneID="pdi-es-w3c">
             <objects>
-                <viewController id="jnI-EM-4Pu" customClass="ViewController5" customModule="Encrypto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="jnI-EM-4Pu" customClass="ViewController5" customModule="EncryptoCSC190" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fVa-KJ-8SD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -694,7 +714,7 @@
         <!--View Controller6-->
         <scene sceneID="Y6O-Uv-ZfS">
             <objects>
-                <viewController id="FaU-ZG-FMn" customClass="ViewController6" customModule="Encrypto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="FaU-ZG-FMn" customClass="ViewController6" customModule="EncryptoCSC190" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yJi-28-ZbO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -755,7 +775,7 @@
         <!--View Controller7-->
         <scene sceneID="QPG-ge-KV5">
             <objects>
-                <viewController id="nQu-pf-T4X" customClass="ViewController7" customModule="Encrypto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="nQu-pf-T4X" customClass="ViewController7" customModule="EncryptoCSC190" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mvy-id-Mni">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
